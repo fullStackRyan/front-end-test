@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Phrasee Technical Test - Senior Front End
 
-## Available Scripts
+This test should take overall no longer than 3 hours. Should you find yourself taking longer please submit what you have, with a note indicating how you would finish the task.
 
-In the project directory, you can run:
+## Task
+You have been supplied with a partially complete mini React application, consisting of a simple login form for a fictitious medical records app.
 
-### `yarn start`
+The application requires refactoring and completion. Please complete the functionality of the app and refactor the code in accordance with your understanding of the best practice.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Feel free to use any technology available in the React environment to achieve the results.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Requirements
 
-### `yarn test`
+1. Validate input fields:
+    - username:
+        - matching email address pattern only
+        - max 128 characters between '@' and '.'
+        - max 6 characters after last '.' character
+    - password:
+        - alphanumeric only
+        - min 8 characters
+        - max 128 characters
+        - at least one number
+        - at least one capital letter
+2.  Allow logging in based on the response from this API endpoint:
+    https://run.mocky.io/v3/3669c83a-9ba1-4424-b08f-a8ef6d699966
+    The payload should be a JSON object of the form
+    {
+        "username": "test.user@phrasee.co",
+        "password": "testpassword"
+    }
+    A successful login will have a response with a 200 HTTP status code
+    An unsuccessful login will have a response with a 401 HTTP status code
+3.  After a successful response has been received, render a page listing hospital patients following the design attached in 'digital-hospital-global-patients.jpg'.
+4.  This page should not be available to users who are 'unauthenticated'. Those users should be presented with the login page instead.
+5.  Please use Redux to manage the state of the app and place any HTTP requests in action dispatcher.
+6.  Group patients by the "type" property and display users only whose "is_completed" value is false.
+7.  Please sort users ascending within groups by "last_visit_date" or alphabetically if dates are the same.
+8.  Add unit tests to the most crucial parts of the application logic (Enzyme/Jest preferable)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Bonus points
 
-### `yarn build`
+    Add functionality to remove whole groups and/or users.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Considerations
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- New routes could be added in the future, some routes will require that the user has been authenticated
+- Some common data may need to be accessed by future components.
+- Styling code should be reusable in the future
+- Class names should follow modern naming conventions
+- Inputs should have behaviour appropriate to their function
+- Potential future code changes should introduce minimal regression bugs without developers being aware
