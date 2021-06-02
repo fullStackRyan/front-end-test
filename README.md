@@ -35,7 +35,7 @@ Feel free to use any technology available in the React environment to achieve th
     }
     A successful login will have a response with a 200 HTTP status code
     An unsuccessful login will have a response with a 401 HTTP status code
-3.  After a successful response has been received, render a page listing hospital patients following the design attached in 'digital-hospital-global-patients.jpg'.
+3.  After a successful response has been received, use it to render a page listing hospital patients following the design attached in 'digital-hospital-global-patients.jpg'.
 4.  This page should not be available to users who are 'unauthenticated'. Those users should be presented with the login page instead.
 5.  Please use Redux to manage the state of the app and place any HTTP requests in action dispatcher.
 6.  Group patients by the "type" property and display users only whose "is_completed" value is false.
