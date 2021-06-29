@@ -4,7 +4,7 @@ This test should take overall no longer than 3 hours. Should you find yourself t
 
 Please clone this repository in order to work on it. 
 
-To submit, email our Head of Recruitment at tj.benson@phrasee.co please remember to include your name. Your email should include any notes that you may have for our consideration, along with either a zip file of your updated version of the application, or a link to a GitHub repository containing the updated application.
+To submit, email our VP People at alma.browne@phrasee.co please remember to include your name. Your email should include any notes that you may have for our consideration, along with either a zip file of your updated version of the application, or a link to a GitHub repository containing the updated application.
 
 ## Task
 You have been supplied with a partially complete mini React application, consisting of a simple login form for a fictitious medical records app.
