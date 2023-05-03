@@ -40,7 +40,7 @@ Feel free to use any technology available in the React environment to achieve th
 5.  Please use Redux to manage the state of the app and place any HTTP requests in action dispatcher.
 6.  Group patients by the "type" property and display users only whose "is_completed" value is false.
 7.  Please sort users ascending within groups by "last_visit_date" or alphabetically if dates are the same.
-8.  Add unit tests to the most crucial parts of the application logic (Enzyme/Jest preferable)
+8.  Add tests to the most crucial parts of the application logic (Testing-library/Jest preferable)
 
 # Bonus points
 
